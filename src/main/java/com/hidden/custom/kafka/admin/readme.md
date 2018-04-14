@@ -18,7 +18,7 @@ topic-test1                              3          183             183         
 ```
 
 ### 自定义
-自定义自己的程序，对程序中的List<PartitionAssignmentState>做相应的处理。
+自定义自己的程序，对程序中的List&lt;PartitionAssignmentState>做相应的处理。
 
 ```
 public class PartitionAssignmentState {
