@@ -1,11 +1,10 @@
 package com.hidden.custom.kafka.admin;
 
-import com.hidden.custom.kafka.admin.model.ConsumerSummary;
-import com.hidden.custom.kafka.admin.model.PartitionAssignmentState;
 import kafka.admin.AdminClient;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.CommonClientConfigs;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.admin.model.ConsumerSummary;
+import org.apache.kafka.clients.admin.model.PartitionAssignmentState;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.TopicPartition;
@@ -20,7 +19,7 @@ import static java.util.stream.Collectors.toList;
  * Created by hidden.zhu on 2018/4/10.
  */
 @Slf4j
-public class KafkaConsumerGroupCustomService {
+public class KafkaConsumerGroupCustomService{
     private static final String GROUP_ID = "ConsumerGroupID";
 
     private String brokerUrl;
@@ -34,14 +33,20 @@ public class KafkaConsumerGroupCustomService {
 
     public void init() {
         this.adminClient = createAdminClient(this.brokerUrl);
-        this.consumer = createNewConsumer(this.brokerUrl, GROUP_ID);
+        this.consumer = ConsumerGroupUtils.createNewConsumer(this.brokerUrl, GROUP_ID);
         this.newAdminClient = createNewAdminClient(this.brokerUrl);
     }
 
     public void close(){
-        this.adminClient.close();
-        this.consumer.close();
-        this.newAdminClient.close();
+        if (this.adminClient != null) {
+            this.adminClient.close();
+        }
+        if (this.consumer != null) {
+            this.consumer.close();
+        }
+        if (this.newAdminClient != null) {
+            this.newAdminClient.close();
+        }
     }
 
     public List<PartitionAssignmentState> collectGroupAssignment(String group){
@@ -81,12 +86,12 @@ public class KafkaConsumerGroupCustomService {
         return rowsWithConsumer;
     }
 
-    private static Map<TopicPartition, Long> getLogEndOffsets(List<TopicPartition> list,
+    static Map<TopicPartition, Long> getLogEndOffsets(List<TopicPartition> list,
                                                               KafkaConsumer<String, String> consumer) {
         return consumer.endOffsets(list);
     }
 
-    private static List<PartitionAssignmentState> getRowsWithConsumer(
+    public static List<PartitionAssignmentState> getRowsWithConsumer(
             AdminClient.ConsumerGroupSummary consumerGroupSummary,
             scala.collection.immutable.Map<TopicPartition, Object> offsets,
             KafkaConsumer<String, String> consumer,
@@ -95,7 +100,7 @@ public class KafkaConsumerGroupCustomService {
         List<PartitionAssignmentState> rowsWithConsumer = new ArrayList<>();
         for (ConsumerSummary cs : consumerList) {
             List<TopicPartition> tpList = cs.getAssignment();
-            if (tpList.isEmpty()) {
+            if (tpList != null && tpList.isEmpty()) {
                 PartitionAssignmentState partitionAssignmentState = PartitionAssignmentState.builder()
                         .group(group).coordinator(consumerGroupSummary.coordinator())
                         .consumerId(cs.getConsumerId()).host(cs.getHost())
@@ -106,7 +111,7 @@ public class KafkaConsumerGroupCustomService {
                 assignedTopicPartitions.addAll(tpList);
                 List<PartitionAssignmentState> tempList = tpList.stream()
                         .sorted(comparing(TopicPartition::partition))
-                        .map(tp->{
+                        .map(tp -> {
                             long offset = (Long) offsets.get(tp).get();
                             long leo = logEndOffsets.get(tp);
                             long lag = getLag(offset, leo);
@@ -180,40 +185,5 @@ public class KafkaConsumerGroupCustomService {
         org.apache.kafka.clients.admin.AdminClient kafkaAdminClient
                 = org.apache.kafka.clients.admin.AdminClient.create(properties);
         return kafkaAdminClient;
-    }
-
-    private static KafkaConsumer<String, String> createNewConsumer(String brokerUrl, String groupId) {
-        Properties properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerUrl);
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
-        properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
-        properties.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, "30000");
-        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
-                "org.apache.kafka.common.serialization.StringDeserializer");
-        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
-                "org.apache.kafka.common.serialization.StringDeserializer");
-        KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
-        return kafkaConsumer;
-    }
-
-    public static void printPasList(List<PartitionAssignmentState> list) {
-        System.out.println(String.format("%-40s %-10s %-15s %-15s %-10s %-50s%-30s %s",
-                "TOPIC", "PARTITION", "CURRENT-OFFSET", "LOG-END-OFFSET", "LAG", "CONSUMER-ID", "HOST", "CLIENT-ID"));
-        list.forEach(item -> {
-            System.out.println(String.format("%-40s %-10s %-15s %-15s %-10s %-50s%-30s %s",
-                    item.getTopic(), item.getPartition(), item.getOffset(), item.getLogEndOffset(), item.getLag(),
-                    Optional.ofNullable(item.getConsumerId()).orElse("-"),
-                    Optional.ofNullable(item.getHost()).orElse("-"),
-                    Optional.ofNullable(item.getClientId()).orElse("-")));
-        });
-    }
-
-    /** just for test */
-    public static void main(String[] args) {
-        KafkaConsumerGroupCustomService service = new KafkaConsumerGroupCustomService("localhost:9092");
-        service.init();
-        List<PartitionAssignmentState> pasList = service.collectGroupAssignment("CONSUMER_GROUP_ID");
-        printPasList(pasList);
-        service.close();
     }
 }

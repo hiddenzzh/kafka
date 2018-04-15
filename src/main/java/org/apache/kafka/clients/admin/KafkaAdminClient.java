@@ -1087,6 +1087,7 @@ public class KafkaAdminClient extends AdminClient {
                             "metadata for group " + group));
                 }
                 if (!isValidConsumerGroupResponse(metadata)) {
+                    System.out.println(metadata);
                     consumerGroupFuture.completeExceptionally(new KafkaException("The consumer group command timed " +
                             "out while waiting for group to initialize"));
                 }
@@ -1130,7 +1131,7 @@ public class KafkaAdminClient extends AdminClient {
     }
 
     private boolean isValidConsumerGroupResponse(DescribeGroupsResponse.GroupMetadata metadata) {
-        return metadata.error() == null && (metadata.state().equals("Dead") || metadata.state().equals("Empty") ||
+        return metadata.error() == Errors.NONE && (metadata.state().equals("Dead") || metadata.state().equals("Empty") ||
                 metadata.protocolType().equals(ConsumerProtocol.PROTOCOL_TYPE));
     }
 

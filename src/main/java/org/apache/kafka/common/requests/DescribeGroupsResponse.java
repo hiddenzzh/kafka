@@ -16,6 +16,7 @@
  */
 package org.apache.kafka.common.requests;
 
+import lombok.Data;
 import org.apache.kafka.common.protocol.ApiKeys;
 import org.apache.kafka.common.protocol.Errors;
 import org.apache.kafka.common.protocol.types.ArrayOf;
@@ -149,6 +150,7 @@ public class DescribeGroupsResponse extends AbstractResponse {
         return errorCounts;
     }
 
+    @Data
     public static class GroupMetadata {
         private final Errors error;
         private final String state;
