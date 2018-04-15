@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc64b357-7a37-4201-b777-902e42072fd3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/AclCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/AdminClient.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/AdminOperationException.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/AdminUtils.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/BrokerApiVersionsCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/BrokerMetadata.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConfigCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/DeleteRecordsCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/LogDirsCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/PreferredReplicaLeaderElectionCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/RackAwareMode.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/ReassignPartitionsCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/TopicCommand.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/admin/ZkSecurityMigrator.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/ApiUtils.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/ApiVersion.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/FetchRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/FetchResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/GroupCoordinatorRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/GroupCoordinatorResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/LeaderAndIsr.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetCommitRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetCommitResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetFetchRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetFetchResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/OffsetResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/ProducerRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/ProducerResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/RequestOrResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/TopicMetadata.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/TopicMetadataRequest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/api/TopicMetadataResponse.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/CleanerConfig.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/IndexEntry.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/Log.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogCleaner.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogCleanerManager.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogConfig.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogManager.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogSegment.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/LogValidator.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/OffsetIndex.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/OffsetMap.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/ProducerStateManager.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/TimeIndex.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/TransactionIndex.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/log/package.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/tools/GetOffsetShell.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/tools/JmxTool.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/tools/MirrorMaker.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/tools/PerfConfig.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/scala/kafka/tools/StreamsResetter.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.class" afterPath="$PROJECT_DIR$/target/classes/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka.iml" afterPath="$PROJECT_DIR$/kafka.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" afterPath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" afterPath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" afterPath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" />
     </list>
     <ignored path="kafka-custom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +28,8 @@
       <file leaf-file-name="KafkaConsumerGroupService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="135" column="68" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1315#1316#0" expanded="true" />
@@ -100,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsumerGroupMainTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsumerGroupMainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -108,6 +47,19 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SECOND">
+              <first_editor relative-caret-position="725">
+                <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -135,8 +87,8 @@
       <file leaf-file-name="KafkaConsumerGroupCustomService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="187" column="5" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+            <state relative-caret-position="525">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -214,7 +166,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaAdminMgr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" />
         <option value="$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupService.java" />
@@ -224,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" />
       </list>
     </option>
   </component>
@@ -346,6 +298,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka-custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka-custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka-custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka-custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1012,6 +1092,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bc64b357-7a37-4201-b777-902e42072fd3" name="Default" comment="" />
@@ -1020,15 +1103,15 @@
       <option name="presentableId" value="Default" />
       <updated>1523686621375</updated>
       <workItem from="1523686624902" duration="3321000" />
-      <workItem from="1523708082261" duration="6995000" />
+      <workItem from="1523708082261" duration="7974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10316000" />
+    <option name="totallyTimeSpent" value="11295000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1039,7 +1122,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1201,16 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/model/PartitionAssignmentState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1253,16 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="187" column="5" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1287,6 +1350,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-975">
@@ -1295,10 +1368,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="135" column="68" selection-start-line="135" selection-start-column="68" selection-end-line="135" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1315#1316#0" expanded="true" />
@@ -1307,13 +1390,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="725">
+            <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
