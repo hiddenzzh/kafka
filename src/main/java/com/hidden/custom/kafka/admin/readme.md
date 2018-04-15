@@ -12,8 +12,7 @@
 参见org.apache.kafka.clients.admin.app.KafkaConsumerGroupService，主要是通过扩展KafkaAdminClient来实现。
 
 ### Demo
-运行环境：JDK8
-执行ConsumerGroupMainTest效果参考如下：
+运行环境：JDK8。执行ConsumerGroupMainTest，效果参考如下：
 
 ```
 TOPIC                                    PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG        CONSUMER-ID                                       HOST                           CLIENT-ID

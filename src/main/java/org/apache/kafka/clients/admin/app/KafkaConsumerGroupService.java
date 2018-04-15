@@ -90,7 +90,7 @@ public class KafkaConsumerGroupService{
         return rowsWithConsumer;
     }
 
-    private static List<PartitionAssignmentState> getRowsWithConsumer(ConsumerGroupSummary consumerGroupSummary,
+    private List<PartitionAssignmentState> getRowsWithConsumer(ConsumerGroupSummary consumerGroupSummary,
                                                                       Map<TopicPartition, Long> offsets,
                                                                       KafkaConsumer<String, String> consumer,
                                                                       List<ConsumerSummary> consumerList,
@@ -125,7 +125,7 @@ public class KafkaConsumerGroupService{
         return rowsWithConsumer;
     }
 
-    private static List<PartitionAssignmentState> getRowsWithoutConsumer(ConsumerGroupSummary consumerGroupSummary,
+    private List<PartitionAssignmentState> getRowsWithoutConsumer(ConsumerGroupSummary consumerGroupSummary,
                                                                          Map<TopicPartition,Long> offsets,
                                                                          KafkaConsumer<String,String> consumer,
                                                                          List<TopicPartition> assignedTopicPartitions,

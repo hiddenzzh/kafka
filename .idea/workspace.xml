@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc64b357-7a37-4201-b777-902e42072fd3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" afterPath="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" afterPath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" afterPath="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" />
     </list>
     <ignored path="kafka-custom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="KafkaConsumerGroupService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KafkaConsumerGroupService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
+            <state relative-caret-position="547">
+              <caret line="69" column="107" selection-start-line="69" selection-start-column="107" selection-end-line="69" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,12 +53,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="725">
-                <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="250">
+                <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -67,9 +69,74 @@
       <file leaf-file-name="KafkaAdminClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-975">
-              <caret line="1088" column="62" selection-start-line="1088" selection-start-column="62" selection-end-line="1088" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="25">
+              <caret line="1074" column="106" selection-start-line="1074" selection-start-column="98" selection-end-line="1074" selection-end-column="106" />
+              <folding>
+                <element signature="e#0#93329#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#15016#15017#0" expanded="false" />
+                <element signature="e#15043#15044#0" expanded="false" />
+                <element signature="e#17033#17034#0" expanded="false" />
+                <element signature="e#17077#17078#0" expanded="false" />
+                <element signature="e#17128#17129#0" expanded="false" />
+                <element signature="e#17192#17193#0" expanded="false" />
+                <element signature="e#17369#17370#0" expanded="false" />
+                <element signature="e#17429#17430#0" expanded="false" />
+                <element signature="e#17609#17610#0" expanded="false" />
+                <element signature="e#17683#17684#0" expanded="false" />
+                <element signature="e#22521#22522#0" expanded="false" />
+                <element signature="e#22557#22558#0" expanded="false" />
+                <element signature="e#22611#22612#0" expanded="false" />
+                <element signature="e#22706#22707#0" expanded="false" />
+                <element signature="e#22800#22801#0" expanded="false" />
+                <element signature="e#22856#22857#0" expanded="false" />
+                <element signature="e#25018#25019#0" expanded="false" />
+                <element signature="e#25062#25063#0" expanded="false" />
+                <element signature="e#47778#47779#0" expanded="false" />
+                <element signature="e#47862#47863#0" expanded="false" />
+                <element signature="e#48081#48082#0" expanded="false" />
+                <element signature="e#48121#48122#0" expanded="false" />
+                <element signature="e#48172#48173#0" expanded="false" />
+                <element signature="e#48212#48213#0" expanded="false" />
+                <element signature="e#50043#50044#0" expanded="false" />
+                <element signature="e#50118#50119#0" expanded="false" />
+                <element signature="e#51931#51932#0" expanded="false" />
+                <element signature="e#52002#52003#0" expanded="false" />
+                <element signature="e#54827#54828#0" expanded="false" />
+                <element signature="e#54917#54918#0" expanded="false" />
+                <element signature="e#57437#57438#0" expanded="false" />
+                <element signature="e#57527#57528#0" expanded="false" />
+                <element signature="e#58103#58104#0" expanded="false" />
+                <element signature="e#58177#58178#0" expanded="false" />
+                <element signature="e#58950#58951#0" expanded="false" />
+                <element signature="e#59033#59034#0" expanded="false" />
+                <element signature="e#63224#63225#0" expanded="false" />
+                <element signature="e#63314#63315#0" expanded="false" />
+                <element signature="e#65915#65916#0" expanded="false" />
+                <element signature="e#65993#65994#0" expanded="false" />
+                <element signature="e#66494#66495#0" expanded="false" />
+                <element signature="e#66565#66566#0" expanded="false" />
+                <element signature="e#67742#67743#0" expanded="false" />
+                <element signature="e#67824#67825#0" expanded="false" />
+                <element signature="e#69010#69011#0" expanded="false" />
+                <element signature="e#69095#69096#0" expanded="false" />
+                <element signature="e#69997#69998#0" expanded="false" />
+                <element signature="e#70077#70078#0" expanded="false" />
+                <element signature="e#71604#71605#0" expanded="false" />
+                <element signature="e#71689#71690#0" expanded="false" />
+                <element signature="e#77490#77491#0" expanded="false" />
+                <element signature="e#77575#77576#0" expanded="false" />
+                <element signature="e#80590#80591#0" expanded="false" />
+                <element signature="e#80675#80676#0" expanded="false" />
+                <element signature="e#83834#83835#0" expanded="false" />
+                <element signature="e#83927#83928#0" expanded="false" />
+                <element signature="e#85848#85849#0" expanded="false" />
+                <element signature="e#85941#85942#0" expanded="false" />
+                <element signature="e#91254#91255#0" expanded="false" />
+                <element signature="e#91347#91348#0" expanded="false" />
+                <element signature="e#93124#93125#0" expanded="false" />
+                <element signature="e#93209#93210#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,7 +144,7 @@
       <file leaf-file-name="DescribeGroupsResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="2775">
               <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
               <folding />
             </state>
@@ -87,8 +154,8 @@
       <file leaf-file-name="KafkaConsumerGroupCustomService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="44" />
+            <state relative-caret-position="-303">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,7 +166,7 @@
       <file leaf-file-name="ConsumerGroupUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
+            <state relative-caret-position="575">
               <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -170,12 +237,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java" />
       </list>
     </option>
   </component>
@@ -228,6 +295,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -488,7 +556,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1103,21 +1170,21 @@
       <option name="presentableId" value="Default" />
       <updated>1523686621375</updated>
       <workItem from="1523686624902" duration="3321000" />
-      <workItem from="1523708082261" duration="7974000" />
+      <workItem from="1523708082261" duration="8995000" />
+      <workItem from="1523769211175" duration="907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11295000" />
+    <option name="totallyTimeSpent" value="13223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1128,17 +1195,18 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1163,11 +1231,142 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupMainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="250">
+            <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#93329#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#15016#15017#0" expanded="false" />
+            <element signature="e#15043#15044#0" expanded="false" />
+            <element signature="e#17033#17034#0" expanded="false" />
+            <element signature="e#17077#17078#0" expanded="false" />
+            <element signature="e#17128#17129#0" expanded="false" />
+            <element signature="e#17192#17193#0" expanded="false" />
+            <element signature="e#17369#17370#0" expanded="false" />
+            <element signature="e#17429#17430#0" expanded="false" />
+            <element signature="e#17609#17610#0" expanded="false" />
+            <element signature="e#17683#17684#0" expanded="false" />
+            <element signature="e#22521#22522#0" expanded="false" />
+            <element signature="e#22557#22558#0" expanded="false" />
+            <element signature="e#22611#22612#0" expanded="false" />
+            <element signature="e#22706#22707#0" expanded="false" />
+            <element signature="e#22800#22801#0" expanded="false" />
+            <element signature="e#22856#22857#0" expanded="false" />
+            <element signature="e#25018#25019#0" expanded="false" />
+            <element signature="e#25062#25063#0" expanded="false" />
+            <element signature="e#47778#47779#0" expanded="false" />
+            <element signature="e#47862#47863#0" expanded="false" />
+            <element signature="e#48081#48082#0" expanded="false" />
+            <element signature="e#48121#48122#0" expanded="false" />
+            <element signature="e#48172#48173#0" expanded="false" />
+            <element signature="e#48212#48213#0" expanded="false" />
+            <element signature="e#50043#50044#0" expanded="false" />
+            <element signature="e#50118#50119#0" expanded="false" />
+            <element signature="e#51931#51932#0" expanded="false" />
+            <element signature="e#52002#52003#0" expanded="false" />
+            <element signature="e#54827#54828#0" expanded="false" />
+            <element signature="e#54917#54918#0" expanded="false" />
+            <element signature="e#57437#57438#0" expanded="false" />
+            <element signature="e#57527#57528#0" expanded="false" />
+            <element signature="e#58103#58104#0" expanded="false" />
+            <element signature="e#58177#58178#0" expanded="false" />
+            <element signature="e#58950#58951#0" expanded="false" />
+            <element signature="e#59033#59034#0" expanded="false" />
+            <element signature="e#63224#63225#0" expanded="false" />
+            <element signature="e#63314#63315#0" expanded="false" />
+            <element signature="e#65915#65916#0" expanded="false" />
+            <element signature="e#65993#65994#0" expanded="false" />
+            <element signature="e#66494#66495#0" expanded="false" />
+            <element signature="e#66565#66566#0" expanded="false" />
+            <element signature="e#67742#67743#0" expanded="false" />
+            <element signature="e#67824#67825#0" expanded="false" />
+            <element signature="e#69010#69011#0" expanded="false" />
+            <element signature="e#69095#69096#0" expanded="false" />
+            <element signature="e#69997#69998#0" expanded="false" />
+            <element signature="e#70077#70078#0" expanded="false" />
+            <element signature="e#71604#71605#0" expanded="false" />
+            <element signature="e#71689#71690#0" expanded="false" />
+            <element signature="e#77490#77491#0" expanded="false" />
+            <element signature="e#77575#77576#0" expanded="false" />
+            <element signature="e#80590#80591#0" expanded="false" />
+            <element signature="e#80675#80676#0" expanded="false" />
+            <element signature="e#83834#83835#0" expanded="false" />
+            <element signature="e#83927#83928#0" expanded="false" />
+            <element signature="e#85848#85849#0" expanded="false" />
+            <element signature="e#85941#85942#0" expanded="false" />
+            <element signature="e#91254#91255#0" expanded="false" />
+            <element signature="e#91347#91348#0" expanded="false" />
+            <element signature="e#93124#93125#0" expanded="false" />
+            <element signature="e#93209#93210#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3800">
+          <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,36 +1386,13 @@
           <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/model/PartitionAssignmentState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1257,7 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,18 +1440,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3200">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/admin/ConsumerGroupCommand.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/common/acl/AclBinding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1304,21 +1471,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/ConsumerGroupUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
+        <state relative-caret-position="575">
           <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1326,27 +1485,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="288" column="27" selection-start-line="288" selection-start-column="27" selection-end-line="288" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scala/kafka/log/AbstractIndex.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupScalaDemo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/common/requests/DescribeGroupsResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="2775">
           <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="250">
+            <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1074" column="106" selection-start-line="1074" selection-start-column="98" selection-end-line="1074" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#93329#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#15016#15017#0" expanded="false" />
+            <element signature="e#15043#15044#0" expanded="false" />
+            <element signature="e#17033#17034#0" expanded="false" />
+            <element signature="e#17077#17078#0" expanded="false" />
+            <element signature="e#17128#17129#0" expanded="false" />
+            <element signature="e#17192#17193#0" expanded="false" />
+            <element signature="e#17369#17370#0" expanded="false" />
+            <element signature="e#17429#17430#0" expanded="false" />
+            <element signature="e#17609#17610#0" expanded="false" />
+            <element signature="e#17683#17684#0" expanded="false" />
+            <element signature="e#22521#22522#0" expanded="false" />
+            <element signature="e#22557#22558#0" expanded="false" />
+            <element signature="e#22611#22612#0" expanded="false" />
+            <element signature="e#22706#22707#0" expanded="false" />
+            <element signature="e#22800#22801#0" expanded="false" />
+            <element signature="e#22856#22857#0" expanded="false" />
+            <element signature="e#25018#25019#0" expanded="false" />
+            <element signature="e#25062#25063#0" expanded="false" />
+            <element signature="e#47778#47779#0" expanded="false" />
+            <element signature="e#47862#47863#0" expanded="false" />
+            <element signature="e#48081#48082#0" expanded="false" />
+            <element signature="e#48121#48122#0" expanded="false" />
+            <element signature="e#48172#48173#0" expanded="false" />
+            <element signature="e#48212#48213#0" expanded="false" />
+            <element signature="e#50043#50044#0" expanded="false" />
+            <element signature="e#50118#50119#0" expanded="false" />
+            <element signature="e#51931#51932#0" expanded="false" />
+            <element signature="e#52002#52003#0" expanded="false" />
+            <element signature="e#54827#54828#0" expanded="false" />
+            <element signature="e#54917#54918#0" expanded="false" />
+            <element signature="e#57437#57438#0" expanded="false" />
+            <element signature="e#57527#57528#0" expanded="false" />
+            <element signature="e#58103#58104#0" expanded="false" />
+            <element signature="e#58177#58178#0" expanded="false" />
+            <element signature="e#58950#58951#0" expanded="false" />
+            <element signature="e#59033#59034#0" expanded="false" />
+            <element signature="e#63224#63225#0" expanded="false" />
+            <element signature="e#63314#63315#0" expanded="false" />
+            <element signature="e#65915#65916#0" expanded="false" />
+            <element signature="e#65993#65994#0" expanded="false" />
+            <element signature="e#66494#66495#0" expanded="false" />
+            <element signature="e#66565#66566#0" expanded="false" />
+            <element signature="e#67742#67743#0" expanded="false" />
+            <element signature="e#67824#67825#0" expanded="false" />
+            <element signature="e#69010#69011#0" expanded="false" />
+            <element signature="e#69095#69096#0" expanded="false" />
+            <element signature="e#69997#69998#0" expanded="false" />
+            <element signature="e#70077#70078#0" expanded="false" />
+            <element signature="e#71604#71605#0" expanded="false" />
+            <element signature="e#71689#71690#0" expanded="false" />
+            <element signature="e#77490#77491#0" expanded="false" />
+            <element signature="e#77575#77576#0" expanded="false" />
+            <element signature="e#80590#80591#0" expanded="false" />
+            <element signature="e#80675#80676#0" expanded="false" />
+            <element signature="e#83834#83835#0" expanded="false" />
+            <element signature="e#83927#83928#0" expanded="false" />
+            <element signature="e#85848#85849#0" expanded="false" />
+            <element signature="e#85941#85942#0" expanded="false" />
+            <element signature="e#91254#91255#0" expanded="false" />
+            <element signature="e#91347#91348#0" expanded="false" />
+            <element signature="e#93124#93125#0" expanded="false" />
+            <element signature="e#93209#93210#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1360,18 +1589,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/KafkaAdminClient.java">
+    <entry file="jar://$PROJECT_DIR$/../../../Java/jdk1.8.0_112/src.zip!/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <caret line="1088" column="62" selection-start-line="1088" selection-start-column="62" selection-end-line="1088" selection-end-column="62" />
+        <state relative-caret-position="333">
+          <caret line="367" column="37" selection-start-line="367" selection-start-column="37" selection-end-line="367" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/KafkaConsumerGroupCustomService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="44" />
+        <state relative-caret-position="-303">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1380,24 +1609,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/kafka/clients/admin/app/KafkaConsumerGroupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
+        <state relative-caret-position="547">
+          <caret line="69" column="107" selection-start-line="69" selection-start-column="107" selection-end-line="69" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hidden/custom/kafka/admin/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="725">
-            <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

@@ -50,16 +50,16 @@ public class KafkaConsumerGroupCustomService{
     }
 
     public List<PartitionAssignmentState> collectGroupAssignment(String group){
+        List<PartitionAssignmentState> list = new ArrayList<>();
         try {
-            List<PartitionAssignmentState> list = collectGroupAssignment(this.adminClient, this.consumer, group);
-            return list;
+            list = collectGroupAssignment(this.adminClient, this.consumer, group);
         } catch (Exception e) {
             log.error("error in collect group information", e);
         }
-        return Collections.EMPTY_LIST;
+        return list;
     }
 
-    public static List<PartitionAssignmentState> collectGroupAssignment(
+    public List<PartitionAssignmentState> collectGroupAssignment(
             AdminClient adminClient, KafkaConsumer<String, String> consumer, String group) {
         AdminClient.ConsumerGroupSummary consumerGroupSummary
                 = adminClient.describeConsumerGroup(group, 0);
@@ -91,7 +91,7 @@ public class KafkaConsumerGroupCustomService{
         return consumer.endOffsets(list);
     }
 
-    public static List<PartitionAssignmentState> getRowsWithConsumer(
+    public List<PartitionAssignmentState> getRowsWithConsumer(
             AdminClient.ConsumerGroupSummary consumerGroupSummary,
             scala.collection.immutable.Map<TopicPartition, Object> offsets,
             KafkaConsumer<String, String> consumer,
@@ -127,7 +127,7 @@ public class KafkaConsumerGroupCustomService{
         return rowsWithConsumer;
     }
 
-    private static List<PartitionAssignmentState> getRowsWithoutConsumer(
+    private List<PartitionAssignmentState> getRowsWithoutConsumer(
             AdminClient.ConsumerGroupSummary consumerGroupSummary,
             scala.collection.immutable.Map<TopicPartition, Object> offsets,
             KafkaConsumer<String, String> consumer,
@@ -148,7 +148,7 @@ public class KafkaConsumerGroupCustomService{
         }).collect(toList());
     }
 
-    private static List<ConsumerSummary> changeToJavaList(
+    private List<ConsumerSummary> changeToJavaList(
             scala.collection.immutable.List<AdminClient.ConsumerSummary> consumers) {
         List<ConsumerSummary> consumerList = new ArrayList<>();
         for (scala.collection.Iterator<AdminClient.ConsumerSummary> iterator = consumers.iterator();

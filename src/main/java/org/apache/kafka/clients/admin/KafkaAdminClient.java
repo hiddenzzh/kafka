@@ -1054,7 +1054,7 @@ public class KafkaAdminClient extends AdminClient {
         }
     }
 
-    /***********************************************add by hidden.zhu********************************************************/
+    /***********************************************add by 朱小厮********************************************************/
 
     public DescribeConsumerGroupResult describeConsumerGroup(final String group,
                                                              final DescribeConsumerGroupOptions options) {
