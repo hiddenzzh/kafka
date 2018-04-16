@@ -25,7 +25,6 @@ public class KafkaConsumerGroupCustomService{
 
     private String brokerUrl;
     private AdminClient adminClient;
-    private org.apache.kafka.clients.admin.AdminClient newAdminClient;
     private KafkaConsumer<String, String> consumer;
 
     public KafkaConsumerGroupCustomService(String brokerUrl) {
@@ -35,7 +34,6 @@ public class KafkaConsumerGroupCustomService{
     public void init() {
         this.adminClient = createAdminClient(this.brokerUrl);
         this.consumer = ConsumerGroupUtils.createNewConsumer(this.brokerUrl, GROUP_ID);
-        this.newAdminClient = createNewAdminClient(this.brokerUrl);
     }
 
     public void close(){
@@ -44,9 +42,6 @@ public class KafkaConsumerGroupCustomService{
         }
         if (this.consumer != null) {
             this.consumer.close();
-        }
-        if (this.newAdminClient != null) {
-            this.newAdminClient.close();
         }
     }
 
@@ -176,17 +171,5 @@ public class KafkaConsumerGroupCustomService{
         props.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, brokerUrl);
         AdminClient adminClient = AdminClient.create(props);
         return adminClient;
-    }
-
-    private static org.apache.kafka.clients.admin.AdminClient createNewAdminClient(String brokerUrl) {
-        Properties properties = new Properties();
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokerUrl);
-        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
-                "org.apache.kafka.common.serialization.StringSerializer");
-        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
-                "org.apache.kafka.common.serialization.StringSerializer");
-        org.apache.kafka.clients.admin.AdminClient kafkaAdminClient
-                = org.apache.kafka.clients.admin.AdminClient.create(properties);
-        return kafkaAdminClient;
     }
 }
