@@ -136,8 +136,8 @@ public class KafkaConsumerGroupCustomService{
         offsets.keysIterator().foreach(tp -> tpList.add(tp));
 
         Map<TopicPartition, Long> logEndOffsets = getLogEndOffsets(tpList, consumer);
-        return tpList.stream().
-                filter(tp->!assignedTopicPartitions.contains(tp))
+        return tpList.stream()
+                .filter(tp->!assignedTopicPartitions.contains(tp))
                 .map(tp -> {
                     long leo = logEndOffsets.get(tp);
                     long offset = (Long) offsets.get(tp).get();
