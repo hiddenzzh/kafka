@@ -56,32 +56,39 @@ public class KafkaConsumerGroupCustomService{
     }
 
     public List<PartitionAssignmentState> collectGroupAssignment(
-            AdminClient adminClient, KafkaConsumer<String, String> consumer, String group) {
+            AdminClient adminClient, KafkaConsumer<String, String> consumer,
+            String group) {
+        //1. 获取consumer group的基本信息，包括CONSUMER-ID、HOST、
+        // CLIENT-ID以及TopicPartition信息
         AdminClient.ConsumerGroupSummary consumerGroupSummary
                 = adminClient.describeConsumerGroup(group, 0);
-
         List<TopicPartition> assignedTopicPartitions = new ArrayList<>();
         List<PartitionAssignmentState> rowsWithConsumer = new ArrayList<>();
-
         scala.collection.immutable.List<AdminClient.ConsumerSummary> consumers
                 = consumerGroupSummary.consumers().get();
         if (consumers != null) {
+            //2. 获取各个分区(Partition)的对应的消费位移CURRENT-OFFSET
             scala.collection.immutable.Map<TopicPartition, Object> offsets
                     = adminClient.listGroupOffsets(group);
             if (offsets.nonEmpty()) {
                 String state = consumerGroupSummary.state();
-                if (state.equals("Stable") || state.equals("Empty") || state.equals("PreparingRebalance")
+                // 3. 还有一个状态是Dead表示"group"对应的consumer group不存在
+                if (state.equals("Stable") || state.equals("Empty")
+                        || state.equals("PreparingRebalance")
                         || state.equals("AwaitingSync")) {
                     List<ConsumerSummary> consumerList = changeToJavaList(consumers);
+                    // 4. 获取当前有消费者的消费信息，即包含CONSUMER-ID、HOST、CLIENT-ID
                     rowsWithConsumer = getRowsWithConsumer(consumerGroupSummary, offsets,
                             consumer, consumerList, assignedTopicPartitions, group);
                 }
             }
-            List<PartitionAssignmentState> rowsWithoutConsumer = getRowsWithoutConsumer(consumerGroupSummary,
+            //5. 获取当前没有消费者的消费信息
+            List<PartitionAssignmentState> rowsWithoutConsumer =
+                    getRowsWithoutConsumer(consumerGroupSummary,
                     offsets, consumer, assignedTopicPartitions, group);
+            //6. 合并结果
             rowsWithConsumer.addAll(rowsWithoutConsumer);
         }
-
         return rowsWithConsumer;
     }
 
