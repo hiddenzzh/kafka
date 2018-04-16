@@ -1091,17 +1091,13 @@ public class KafkaAdminClient extends AdminClient {
                     consumerGroupFuture.completeExceptionally(new KafkaException("The consumer group command timed " +
                             "out while waiting for group to initialize"));
                 }
-                List<ConsumerSummary> consumers = null;
-                if (metadata.state().equals("Stable")) {
-                    consumers = metadata.members().stream().map(member -> {
-                        PartitionAssignor.Assignment assignment = ConsumerProtocol.deserializeAssignment(ByteBuffer
-                                .wrap(Utils.readBytes(member.memberAssignment())));
-                        return ConsumerSummary.builder().consumerId(member.memberId())
-                                .clientId(member.clientId()).host(member.clientHost())
-                                .assignment(assignment.partitions()).build();
-                    }).collect(toList());
-
-                }
+                List<ConsumerSummary> consumers = metadata.members().stream().map(member -> {
+                    PartitionAssignor.Assignment assignment = ConsumerProtocol.deserializeAssignment(ByteBuffer
+                            .wrap(Utils.readBytes(member.memberAssignment())));
+                    return ConsumerSummary.builder().consumerId(member.memberId())
+                            .clientId(member.clientId()).host(member.clientHost())
+                            .assignment(assignment.partitions()).build();
+                }).collect(toList());
                 ConsumerGroupSummary consumerGroupSummary = ConsumerGroupSummary.builder()
                         .state(metadata.state()).assignmentStrategy(metadata.protocol())
                         .consumers(consumers).coordinator(provider.provide()).build();

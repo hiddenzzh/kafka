@@ -8,6 +8,7 @@ import org.apache.kafka.clients.admin.model.PartitionAssignmentState;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.TopicPartition;
+import scala.collection.JavaConverters;
 
 import java.util.*;
 
@@ -69,11 +70,13 @@ public class KafkaConsumerGroupCustomService{
 
         scala.collection.immutable.List<AdminClient.ConsumerSummary> consumers
                 = consumerGroupSummary.consumers().get();
-        if (consumers.nonEmpty()) {
+        if (consumers != null) {
             scala.collection.immutable.Map<TopicPartition, Object> offsets
                     = adminClient.listGroupOffsets(group);
             if (offsets.nonEmpty()) {
-                if (consumerGroupSummary.state().trim().equalsIgnoreCase("Stable")) {
+                String state = consumerGroupSummary.state();
+                if (state.equals("Stable") || state.equals("Empty") || state.equals("PreparingRebalance")
+                        || state.equals("AwaitingSync")) {
                     List<ConsumerSummary> consumerList = changeToJavaList(consumers);
                     rowsWithConsumer = getRowsWithConsumer(consumerGroupSummary, offsets,
                             consumer, consumerList, assignedTopicPartitions, group);
@@ -83,6 +86,7 @@ public class KafkaConsumerGroupCustomService{
                     offsets, consumer, assignedTopicPartitions, group);
             rowsWithConsumer.addAll(rowsWithoutConsumer);
         }
+
         return rowsWithConsumer;
     }
 
@@ -137,7 +141,8 @@ public class KafkaConsumerGroupCustomService{
 
         Map<TopicPartition, Long> logEndOffsets = getLogEndOffsets(tpList, consumer);
         return tpList.stream()
-                .filter(tp->!assignedTopicPartitions.contains(tp))
+                .filter(tp -> !assignedTopicPartitions.contains(tp))
+                .sorted((tp1, tp2) -> tp1.partition() - tp2.partition())
                 .map(tp -> {
                     long leo = logEndOffsets.get(tp);
                     long offset = (Long) offsets.get(tp).get();
@@ -145,20 +150,18 @@ public class KafkaConsumerGroupCustomService{
                             .group(group).coordinator(consumerGroupSummary.coordinator())
                             .topic(tp.topic()).partition(tp.partition()).offset(offset)
                             .logEndOffset(leo).lag(getLag(offset, leo)).build();
-        }).collect(toList());
+                }).collect(toList());
     }
 
     private List<ConsumerSummary> changeToJavaList(
             scala.collection.immutable.List<AdminClient.ConsumerSummary> consumers) {
-        List<ConsumerSummary> consumerList = new ArrayList<>();
-        for (scala.collection.Iterator<AdminClient.ConsumerSummary> iterator = consumers.iterator();
-             iterator.hasNext(); ) {
-            AdminClient.ConsumerSummary acs = iterator.next();
-            List<TopicPartition> tpl = new ArrayList<>();
-            acs.assignment().iterator().foreach(tp -> tpl.add(tp));
-            consumerList.add(ConsumerSummary.builder().consumerId(acs.consumerId())
-                    .clientId(acs.clientId()).host(acs.host()).assignment(tpl).build());
-        }
+        List<ConsumerSummary> consumerList = JavaConverters.seqAsJavaList(consumers).stream()
+                .map(cs -> {
+                    List<TopicPartition> tpl = new ArrayList<>();
+                    cs.assignment().iterator().foreach(tp -> tpl.add(tp));
+                    return ConsumerSummary.builder().consumerId(cs.consumerId())
+                            .clientId(cs.clientId()).host(cs.host()).assignment(tpl).build();
+                }).collect(toList());
         consumerList.sort((a, b) -> b.getAssignment().size() - a.getAssignment().size());
         return consumerList;
     }

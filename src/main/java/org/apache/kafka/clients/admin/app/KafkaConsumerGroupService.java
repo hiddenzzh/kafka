@@ -74,11 +74,13 @@ public class KafkaConsumerGroupService{
         List<PartitionAssignmentState> rowsWithConsumer = new ArrayList<>();
 
         List<ConsumerSummary> consumers = consumerGroupSummary.getConsumers();
-        if (consumers != null && !consumers.isEmpty()) {
+        if (consumers != null){
             ListGroupOffsetsResult listGroupOffsetsResult = adminClient.listGroupOffsets(group);
             Map<TopicPartition, Long> offsets = listGroupOffsetsResult.values().get(TIMEOUT, TimeUnit.SECONDS);
             if (offsets != null && !offsets.isEmpty()) {
-                if (consumerGroupSummary.getState().trim().equalsIgnoreCase("Stable")) {
+                String state = consumerGroupSummary.getState();
+                if (state.equals("Stable") || state.equals("Empty") ||
+                        state.equals("PreparingRebalance") || state.equals("AwaitingSync")) {
                     rowsWithConsumer = getRowsWithConsumer(consumerGroupSummary, offsets, consumer, consumers,
                             assignedTopicPartitions, group);
                 }

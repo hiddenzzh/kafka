@@ -10,24 +10,26 @@ import java.util.List;
  */
 public class ConsumerGroupMainTest {
     public static void main(String[] args) {
-        testKafkaConsumerGroupCustomService();
+        String brokerUrl = "localhost:9092";
+        String group = "CONSUMER_GROUP_ID";
+        testKafkaConsumerGroupCustomService(brokerUrl,group);
         System.out.println("----------------------------------------------");
-        testKafkaConsumerGroupService();
+        testKafkaConsumerGroupService(brokerUrl,group);
     }
 
 
-    public static void testKafkaConsumerGroupService(){
-        KafkaConsumerGroupService service = new KafkaConsumerGroupService("localhost:9092");
+    public static void testKafkaConsumerGroupService(String brokerUrl, String group){
+        KafkaConsumerGroupService service = new KafkaConsumerGroupService(brokerUrl);
         service.init();
-        List<PartitionAssignmentState> pasList = service.collectGroupAssignment("CONSUMER_GROUP_ID");
+        List<PartitionAssignmentState> pasList = service.collectGroupAssignment(group);
         ConsumerGroupUtils.printPasList(pasList);
         service.close();
     }
 
-    public static void testKafkaConsumerGroupCustomService(){
-        KafkaConsumerGroupCustomService service = new KafkaConsumerGroupCustomService("localhost:9092");
+    public static void testKafkaConsumerGroupCustomService(String brokerUrl, String group){
+        KafkaConsumerGroupCustomService service = new KafkaConsumerGroupCustomService(brokerUrl);
         service.init();
-        List<PartitionAssignmentState> pasList = service.collectGroupAssignment("CONSUMER_GROUP_ID");
+        List<PartitionAssignmentState> pasList = service.collectGroupAssignment(group);
         ConsumerGroupUtils.printPasList(pasList);
         service.close();
     }
