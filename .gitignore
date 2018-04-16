@@ -137,4 +137,4 @@ fabric.properties
 # IDEA
 *.iml
 */target/*
-
+target/
