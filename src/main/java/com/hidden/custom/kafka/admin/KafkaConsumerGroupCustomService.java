@@ -6,7 +6,6 @@ import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.admin.model.ConsumerSummary;
 import org.apache.kafka.clients.admin.model.PartitionAssignmentState;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.TopicPartition;
 import scala.collection.JavaConverters;
 

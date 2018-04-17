@@ -2,7 +2,6 @@ package com.hidden.custom.kafka.admin.model;
 
 import lombok.Builder;
 import lombok.Data;
-import org.apache.kafka.common.Node;
 
 /**
  * Created by hidden.zhu on 2018/4/10.
@@ -20,4 +19,13 @@ public class PartitionAssignmentState {
     private String host;
     private String clientId;
     private long logEndOffset;
+
+    @Data
+    public static class Node{
+        public int id;
+        public String idString;
+        public String host;
+        public int port;
+        public String rack;
+    }
 }
