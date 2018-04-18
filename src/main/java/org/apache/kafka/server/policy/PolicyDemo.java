@@ -5,9 +5,7 @@ import java.util.Map;
 import org.apache.kafka.common.errors.PolicyViolationException;
 
 public class PolicyDemo implements CreateTopicPolicy{
-	
 	public void configure(Map<String, ?> configs) {
-		System.out.println("====================================================configure====");
 		System.out.println(configs);
 	}
 
@@ -15,7 +13,6 @@ public class PolicyDemo implements CreateTopicPolicy{
 
 	public void validate(RequestMetadata requestMetadata)
 			throws PolicyViolationException {
-		System.out.println("====================================================validate=====");
 		System.out.println(requestMetadata);
 		if(requestMetadata.numPartitions()!=null || requestMetadata.replicationFactor()!=null){
 			if(requestMetadata.numPartitions()< 5){
