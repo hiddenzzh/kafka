@@ -21,7 +21,7 @@ public class KafkaConsumerGroupScalaService {
     /**
      * 注意要点：
      * 1. PartitionAssignmentState中的coordinator是Node类型，这个类型需要自定义，Kafka原生的会报错。
-     * 2. 反序列化时Node会有一个empty的属性不识别，结局方案参考代码中的步骤2.
+     * 2. 反序列化时Node会有一个empty的属性不识别，解决方案参考代码中的步骤2.
      */
     public static void main(String[] args) throws IOException {
         String[] agrs = {"--describe", "--bootstrap-server", brokers, "--group", groupId};
@@ -35,9 +35,9 @@ public class KafkaConsumerGroupScalaService {
         mapper.registerModule(new DefaultScalaModule());
         //2. 反序列化时忽略对象不存在的属性
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        //3. 将Scala对象序列化成String
+        //3. 将Scala对象序列化成JSON字符串
         String source = mapper.writeValueAsString(kafkaConsumerGroupService.describeGroup()._2.get());
-        //4. 将String反序列化成Java对象
+        //4. 将JSON字符串反序列化成Java对象
         List<PartitionAssignmentState> target = mapper.readValue(source,
                 getCollectionType(mapper,List.class,PartitionAssignmentState.class));
         //5. 排序
