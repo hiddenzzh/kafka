@@ -1,6 +1,6 @@
 
 ### Preview
-两种方式实现如同 bin/kafka-consumer-group.sh --describe --bootstrap-server localhost:9092 --group CONSUMER_GROUP_ID的效果
+多种方式实现如同 bin/kafka-consumer-group.sh --describe --bootstrap-server localhost:9092 --group CONSUMER_GROUP_ID的效果
 其中：
  - localhost:9092代表kafka broker的地址
  - CONSUMER_GROUP_ID代表consumer group id
@@ -10,6 +10,8 @@
 参见com.hidden.custom.kafka.admin.KafkaConsumerGroupCustomService，主要是通过调用Scala语言编写的kafka.admin.ConsumerGroupCommand.scala文件中的KafkaConsumerGroupService中的方法来实现。
 #### 第二种实现
 参见org.apache.kafka.clients.admin.app.KafkaConsumerGroupService，主要是通过扩展KafkaAdminClient来实现。
+#### 第三种实现
+参见org.apache.kafka.clients.admin.app.KafkaConsumerGroupScalaService，主要是通过jackson-module-scala来实现。
 
 ### Demo
 运行环境：JDK8。执行ConsumerGroupMainTest，效果参考如下：
