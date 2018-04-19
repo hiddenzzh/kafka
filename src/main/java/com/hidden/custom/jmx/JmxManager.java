@@ -62,10 +62,10 @@ public class JmxManager {
 
     public Map<String, Long> getLogStartOffsets(String topic) {
         Map<String, Long> map = new HashMap<>();
-        List<Map<String, Long>> leoList = this.jmxConnList.parallelStream()
+        List<Map<String, Long>> lsoList = this.jmxConnList.parallelStream()
                 .map(jmxConn -> jmxConn.getPartitionLogStartOffset(topic))
                 .collect(toList());
-        leoList.forEach(leo -> leo.keySet().stream()
+        lsoList.forEach(leo -> leo.keySet().stream()
                 .filter(partitionId -> !map.containsKey(partitionId) || leo.get(partitionId) < map.get(partitionId))
                 .forEach(partitionId -> map.put(partitionId, leo.get(partitionId))));
         return map;
