@@ -65,9 +65,9 @@ public class JmxManager {
         List<Map<String, Long>> lsoList = this.jmxConnList.parallelStream()
                 .map(jmxConn -> jmxConn.getPartitionLogStartOffset(topic))
                 .collect(toList());
-        lsoList.forEach(leo -> leo.keySet().stream()
-                .filter(partitionId -> !map.containsKey(partitionId) || leo.get(partitionId) < map.get(partitionId))
-                .forEach(partitionId -> map.put(partitionId, leo.get(partitionId))));
+        lsoList.forEach(lso -> lso.keySet().stream()
+                .filter(partitionId -> !map.containsKey(partitionId) || lso.get(partitionId) < map.get(partitionId))
+                .forEach(partitionId -> map.put(partitionId, lso.get(partitionId))));
         return map;
     }
 
