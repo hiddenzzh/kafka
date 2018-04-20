@@ -33,7 +33,7 @@ public class JmxConn {
         this.kafkaVersion = kafkaVersion;
     }
 
-    public Boolean init() {
+    public boolean init() {
         try {
             JMXServiceURL serviceURL = new JMXServiceURL(jmxUrl);
             connector = JMXConnectorFactory.connect(serviceURL, null);
@@ -449,11 +449,12 @@ public class JmxConn {
         return 0;
     }
 
-    public void checkConnection() {
+    public boolean checkConnection() {
         log.info("checking jmx connection url={} and status={}", jmxUrl, connectStatus);
         if (connectStatus == ConnectStatus.CONNECT_FAILED) {
-            init();
+            return init();
         }
+        return true;
     }
 
     public void closeConnection() {
